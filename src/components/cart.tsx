@@ -21,7 +21,7 @@ export default function ShoppingCart() {
           <div className="flex gap-4">
             <div className="relative h-24 w-24 flex-shrink-0 overflow-hidden rounded-lg bg-gray-100">
               <Image
-                src="/Product Image.png"
+                src="/bye.png"
                 alt="Graystone vase"
                 fill
                 className="object-cover"
@@ -51,7 +51,7 @@ export default function ShoppingCart() {
           <div className="flex gap-4">
             <div className="relative h-24 w-24 flex-shrink-0 overflow-hidden rounded-lg bg-gray-100">
               <Image
-                src="/Product Image (1).png"
+                src="/hello.png"
                 alt="Basic white vase"
                 fill
                 className="object-cover"
