@@ -34,7 +34,7 @@ export function Navbar2() {
     <div className="w-full">
       {/* Top Banner */}
       <div className="w-full bg-[#2A254B] py-2 px-4 text-center text-white">
-        <p className="text-sm">Free delivery on all orders over £50 with code easter checkout</p>
+        <p className="text-sm">{"Free delivery on all orders over £50 with code easter checkout"}</p>
       </div>
 
       {/* Main Navigation */}
@@ -63,7 +63,7 @@ export function Navbar2() {
             <Button variant="ghost" size="icon" className="relative">
               <ShoppingCart className="h-5 w-5" />
               <span className="absolute right-1 top-1 flex h-4 w-4 items-center justify-center rounded-full bg-black text-xs text-white">
-                0
+                {"0"}
               </span>
             </Button>
             </a>
@@ -95,7 +95,7 @@ export function Navbar2() {
             <Button variant="ghost" size="icon" className="relative">
               <ShoppingCart className="h-5 w-5" />
               <span className="absolute right-1 top-1 flex h-4 w-4 items-center justify-center rounded-full bg-black text-xs text-white">
-                0
+              {"0"}
               </span>
             </Button>
             </a>
