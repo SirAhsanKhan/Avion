@@ -56,10 +56,12 @@ export function Navbar() {
 
           {/* Right side: Cart & Profile Icons (hidden on small screens) */}
           <div className="hidden lg:flex items-center">
+            <a href ="/cart">
             <Button variant="ghost" size="icon" className="ml-4 text-gray-400 hover:text-gray-500">
               <ShoppingCart className="h-6 w-6" />
               <span className="sr-only">Shopping cart</span>
             </Button>
+            </a>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" size="icon" className="ml-4 text-gray-400 hover:text-gray-500">
@@ -111,10 +113,12 @@ export function Navbar() {
                       {item}
                     </Link>
                   ))}
+                  <a href='/cart'>
                   <Button variant="ghost" size="sm" className="justify-start text-gray-400 hover:text-gray-500">
                     <ShoppingCart className="h-5 w-5 mr-2" />
                     <span>Cart</span>
                   </Button>
+                  </a>
                   <Button variant="ghost" size="sm" className="justify-start text-gray-400 hover:text-gray-500">
                     <User className="h-5 w-5 mr-2" />
                     <span>Profile</span>
