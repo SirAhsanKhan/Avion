@@ -51,12 +51,14 @@ export default function FeaturesSection() {
               </div>
               <h3 className="font-clash font-medium text-lg">{product.name}</h3>
               <p className="text-muted-foreground mb-3">£{product.price}</p>
-              <Button 
+              <a  href="/products">             
+                <Button 
                 className="w-full transition-transform duration-200 hover:scale-105 active:scale-95" 
                 variant="outline"
               >
                 Add to cart
               </Button>
+              </a>
             </Card>
           </div>
         ))}
@@ -66,6 +68,7 @@ export default function FeaturesSection() {
         className={`text-center mt-12 transition-all duration-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
         style={{ transitionDelay: '500ms' }}
       >
+        <a href="/product-listing">
         <Button 
           variant="outline" 
           size="lg" 
@@ -73,6 +76,7 @@ export default function FeaturesSection() {
         >
           View collection
         </Button>
+      </a>
       </div>
     </section>
   )

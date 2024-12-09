@@ -87,11 +87,13 @@ export default function ShoppingCart() {
           Taxes and shipping are calculated at checkout
         </p>
         <div className="flex justify-end">
+          <a href="/">
           <Button 
             className="rounded-none bg-[#2A254B] px-8 hover:bg-[#2A254B]/90"
           >
             Go to checkout
           </Button>
+          </a>
         </div>
       </div>
     </div>
