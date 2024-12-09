@@ -1,6 +1,7 @@
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Facebook, Twitter, Instagram, Linkedin, PinIcon as Pinterest, WebcamIcon as Skype } from 'lucide-react'
+import Link from "next/link"
 
 export default function Footer() {
   return (
@@ -11,11 +12,11 @@ export default function Footer() {
           <div className="space-y-6">
             <h3 className="text-base font-normal">Menu</h3>
             <nav className="flex flex-col space-y-4">
-              <a href="#" className="text-sm hover:underline">New arrivals</a>
-              <a href="#" className="text-sm hover:underline">Best sellers</a>
-              <a href="#" className="text-sm hover:underline">Recently viewed</a>
-              <a href="#" className="text-sm hover:underline">Popular this week</a>
-              <a href="#" className="text-sm hover:underline">All products</a>
+              <Link href="#" className="text-sm hover:underline">New arrivals</Link>
+              <Link href="#" className="text-sm hover:underline">Best sellers</Link>
+              <Link href="#" className="text-sm hover:underline">Recently viewed</Link>
+              <Link href="#" className="text-sm hover:underline">Popular this week</Link>
+              <Link href="#" className="text-sm hover:underline">All products</Link>
             </nav>
           </div>
 
@@ -23,12 +24,12 @@ export default function Footer() {
           <div className="space-y-6">
             <h3 className="text-base font-normal">Categories</h3>
             <nav className="flex flex-col space-y-4">
-              <a href="#" className="text-sm hover:underline">Crockery</a>
-              <a href="#" className="text-sm hover:underline">Furniture</a>
-              <a href="#" className="text-sm hover:underline">Homeware</a>
-              <a href="#" className="text-sm hover:underline">Plant pots</a>
-              <a href="#" className="text-sm hover:underline">Chairs</a>
-              <a href="#" className="text-sm hover:underline">Crockery</a>
+              <Link href="#" className="text-sm hover:underline">Crockery</Link>
+              <Link href="#" className="text-sm hover:underline">Furniture</Link>
+              <Link href="#" className="text-sm hover:underline">Homeware</Link>
+              <Link href="#" className="text-sm hover:underline">Plant pots</Link>
+              <Link href="#" className="text-sm hover:underline">Chairs</Link>
+              <Link href="#" className="text-sm hover:underline">Crockery</Link>
             </nav>
           </div>
 
@@ -36,11 +37,11 @@ export default function Footer() {
           <div className="space-y-6">
             <h3 className="text-base font-normal">Our company</h3>
             <nav className="flex flex-col space-y-4">
-              <a href="/about" className="text-sm hover:underline">About us</a>
-              <a href="/products" className="text-sm hover:underline">Vacancies</a>
-              <a href="/cart" className="text-sm hover:underline">Contact us</a>
-              <a href="/product-listing" className="text-sm hover:underline">Privacy</a>
-              <a href="/" className="text-sm hover:underline">Returns policy</a>
+              <Link href="/about" className="text-sm hover:underline">About us</Link>
+              <Link href="/products" className="text-sm hover:underline">Vacancies</Link>
+              <Link href="/cart" className="text-sm hover:underline">Contact us</Link>
+              <Link href="/product-listing" className="text-sm hover:underline">Privacy</Link>
+              <Link href="/" className="text-sm hover:underline">Returns policy</Link>
             </nav>
           </div>
 
@@ -66,30 +67,30 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center mt-16 pt-8 border-t border-[#4E4D93]">
           <p className="text-sm mb-6 md:mb-0">Copyright 2022 Avion LTD</p>
           <div className="flex items-center space-x-6">
-            <a href="https://www.linkedin.com/in/ahsan-khan-6a8b902b4/" className="hover:text-gray-300">
+            <Link href="https://www.linkedin.com/in/ahsan-khan-6a8b902b4/" className="hover:text-gray-300">
               <Linkedin className="w-5 h-5" />
               <span className="sr-only">LinkedIn</span>
-            </a>
-            <a href="#" className="hover:text-gray-300">
+            </Link>
+            <Link href="#" className="hover:text-gray-300">
               <Facebook className="w-5 h-5" />
               <span className="sr-only">Facebook</span>
-            </a>
-            <a href="#" className="hover:text-gray-300">
+            </Link>
+            <Link href="#" className="hover:text-gray-300">
               <Instagram className="w-5 h-5" />
               <span className="sr-only">Instagram</span>
-            </a>
-            <a href="#" className="hover:text-gray-300">
+            </Link>
+            <Link href="#" className="hover:text-gray-300">
               <Skype className="w-5 h-5" />
               <span className="sr-only">Skype</span>
-            </a>
-            <a href="#" className="hover:text-gray-300">
+            </Link>
+            <Link href="#" className="hover:text-gray-300">
               <Twitter className="w-5 h-5" />
               <span className="sr-only">Twitter</span>
-            </a>
-            <a href="#" className="hover:text-gray-300">
+            </Link>
+            <Link href="#" className="hover:text-gray-300">
               <Pinterest className="w-5 h-5" />
               <span className="sr-only">Pinterest</span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
