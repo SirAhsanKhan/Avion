@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { Truck, Medal, CreditCard, Recycle } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
+import Link from 'next/link'
 
 export default function FeaturesSection() {
   const [isVisible, setIsVisible] = useState(false)
@@ -51,14 +52,14 @@ export default function FeaturesSection() {
               </div>
               <h3 className="font-clash font-medium text-lg">{product.name}</h3>
               <p className="text-muted-foreground mb-3">£{product.price}</p>
-              <a  href="/products">             
+              <Link  href="/products">             
                 <Button 
                 className="w-full transition-transform duration-200 hover:scale-105 active:scale-95" 
                 variant="outline"
               >
                 Add to cart
               </Button>
-              </a>
+              </Link>
             </Card>
           </div>
         ))}
@@ -68,7 +69,7 @@ export default function FeaturesSection() {
         className={`text-center mt-12 transition-all duration-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
         style={{ transitionDelay: '500ms' }}
       >
-        <a href="/product-listing">
+        <Link href="/product-listing">
         <Button 
           variant="outline" 
           size="lg" 
@@ -76,7 +77,7 @@ export default function FeaturesSection() {
         >
           View collection
         </Button>
-      </a>
+      </Link>
       </div>
     </section>
   )

@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function HeroSection() {
   return (
@@ -11,11 +12,11 @@ export default function HeroSection() {
           A global brand with local beginnings, our story began in a
           small studio in South London in early 2014
         </p>
-        <a href="/product-listing">
+        <Link href="/product-listing">
         <Button className="self-start border-white bg-gray-300 hover:bg-white hover:text-[#2A254B] text-black">
           View collection
         </Button>
-      </a>
+      </Link>
       </div>
       <div className="bg-gray-200 aspect-square md:aspect-auto">
         <img

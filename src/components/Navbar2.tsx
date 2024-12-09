@@ -49,10 +49,10 @@ export function Navbar2() {
             <Link href="/about" className="text-sm text-gray-600 hover:text-gray-900">
               About us
             </Link>
-            <Link href="/contact" className="text-sm text-gray-600 hover:text-gray-900">
+            <Link href="/cart" className="text-sm text-gray-600 hover:text-gray-900">
               Contact
             </Link>
-            <Link href="/blog" className="text-sm text-gray-600 hover:text-gray-900">
+            <Link href="/product-listing" className="text-sm text-gray-600 hover:text-gray-900">
               Blog
             </Link>
             <Button variant="ghost" size="icon">
@@ -81,10 +81,10 @@ export function Navbar2() {
                   <Link href="/about" className="text-sm" onClick={() => setIsOpen(false)}>
                     About us
                   </Link>
-                  <Link href="/contact" className="text-sm" onClick={() => setIsOpen(false)}>
+                  <Link href="/cart" className="text-sm" onClick={() => setIsOpen(false)}>
                     Contact
                   </Link>
-                  <Link href="/blog" className="text-sm" onClick={() => setIsOpen(false)}>
+                  <Link href="/product-listing" className="text-sm" onClick={() => setIsOpen(false)}>
                     Blog
                   </Link>
                 </nav>

@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import Link from "next/link"
 
 export default function ShoppingCart() {
   return (
@@ -87,13 +88,13 @@ export default function ShoppingCart() {
           Taxes and shipping are calculated at checkout
         </p>
         <div className="flex justify-end">
-          <a href="/">
+          <Link href="/">
           <Button 
             className="rounded-none bg-[#2A254B] px-8 hover:bg-[#2A254B]/90"
           >
             Go to checkout
           </Button>
-          </a>
+          </Link>
         </div>
       </div>
     </div>
