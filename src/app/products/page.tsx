@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import Footer from "@/components/footer"
 import News from "@/components/newsletter-section"
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import Link from "next/link"
 
 export default function ProductPage() {
