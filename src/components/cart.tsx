@@ -1,33 +1,75 @@
+'use client'
+
+import { useState, useEffect } from 'react'
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import Link from "next/link"
+import { motion, AnimatePresence } from 'framer-motion'
 
 export default function ShoppingCart() {
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    setIsVisible(true)
+  }, [])
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.1
+      }
+    }
+  }
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut"
+      }
+    }
+  }
+
   return (
-    <div className="mx-auto max-w-[1440px] px-4 py-16 sm:px-6 lg:px-8">
-      <h1 className="mb-12 text-3xl font-normal">Your shopping cart</h1>
+    <motion.div 
+      className="mx-auto max-w-[1440px] px-4 py-16 sm:px-6 lg:px-8"
+      initial="hidden"
+      animate={isVisible ? "visible" : "hidden"}
+      variants={containerVariants}
+    >
+      <motion.h1 className="mb-12 text-3xl font-normal" variants={itemVariants}>Your shopping cart</motion.h1>
       
       {/* Header */}
-      <div className="hidden grid-cols-[2fr,1fr,1fr] gap-4 border-b pb-4 text-sm text-gray-500 md:grid">
+      <motion.div className="hidden grid-cols-[2fr,1fr,1fr] gap-4 border-b pb-4 text-sm text-gray-500 md:grid" variants={itemVariants}>
         <div>Product</div>
         <div className="text-center">Quantity</div>
         <div className="text-right">Total</div>
-      </div>
+      </motion.div>
 
       {/* Products */}
-      <div className="divide-y">
+      <motion.div className="divide-y" variants={containerVariants}>
         {/* Graystone vase */}
-        <div className="grid grid-cols-1 gap-4 py-8 md:grid-cols-[2fr,1fr,1fr]">
+        <motion.div className="grid grid-cols-1 gap-4 py-8 md:grid-cols-[2fr,1fr,1fr]" variants={itemVariants}>
           <div className="flex gap-4">
-            <div className="relative h-24 w-24 flex-shrink-0 overflow-hidden rounded-lg bg-gray-100">
+            <motion.div 
+              className="relative h-24 w-24 flex-shrink-0 overflow-hidden rounded-lg bg-gray-100"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+            >
               <Image
                 src="/bye.png"
                 alt="Graystone vase"
                 fill
                 className="object-cover"
               />
-            </div>
+            </motion.div>
             <div>
               <h3 className="text-lg font-normal">Graystone vase</h3>
               <p className="mt-1 text-sm text-gray-500">
@@ -40,24 +82,28 @@ export default function ShoppingCart() {
             <Input
               type="number"
               min="1"
-              value="1"
-              className="w-20 text-center"
+              defaultValue="1"
+              className="w-20 text-center transition-all duration-300 focus:ring-2 focus:ring-[#2A254B] focus:border-transparent"
             />
           </div>
           <div className="flex items-center justify-end text-lg">£85</div>
-        </div>
+        </motion.div>
 
         {/* Basic white vase */}
-        <div className="grid grid-cols-1 gap-4 py-8 md:grid-cols-[2fr,1fr,1fr]">
+        <motion.div className="grid grid-cols-1 gap-4 py-8 md:grid-cols-[2fr,1fr,1fr]" variants={itemVariants}>
           <div className="flex gap-4">
-            <div className="relative h-24 w-24 flex-shrink-0 overflow-hidden rounded-lg bg-gray-100">
+            <motion.div 
+              className="relative h-24 w-24 flex-shrink-0 overflow-hidden rounded-lg bg-gray-100"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+            >
               <Image
                 src="/hello.png"
                 alt="Basic white vase"
                 fill
                 className="object-cover"
               />
-            </div>
+            </motion.div>
             <div>
               <h3 className="text-lg font-normal">Basic white vase</h3>
               <p className="mt-1 text-sm text-gray-500">
@@ -70,34 +116,34 @@ export default function ShoppingCart() {
             <Input
               type="number"
               min="1"
-              value="1"
-              className="w-20 text-center"
+              defaultValue="1"
+              className="w-20 text-center transition-all duration-300 focus:ring-2 focus:ring-[#2A254B] focus:border-transparent"
             />
           </div>
           <div className="flex items-center justify-end text-lg">£125</div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
       {/* Summary */}
-      <div className="mt-8 space-y-4 border-t pt-8">
-        <div className="flex justify-end gap-4 text-lg">
+      <motion.div className="mt-8 space-y-4 border-t pt-8" variants={containerVariants}>
+        <motion.div className="flex justify-end gap-4 text-lg" variants={itemVariants}>
           <span>Subtotal</span>
           <span>£210</span>
-        </div>
-        <p className="text-right text-sm text-gray-500">
+        </motion.div>
+        <motion.p className="text-right text-sm text-gray-500" variants={itemVariants}>
           Taxes and shipping are calculated at checkout
-        </p>
-        <div className="flex justify-end">
+        </motion.p>
+        <motion.div className="flex justify-end" variants={itemVariants}>
           <Link href="/">
-          <Button 
-            className="rounded-none bg-[#2A254B] px-8 hover:bg-[#2A254B]/90"
-          >
-            Go to checkout
-          </Button>
+            <Button 
+              className="rounded-none bg-[#2A254B] px-8 hover:bg-[#2A254B]/90 transition-all duration-300 transform hover:scale-105 active:scale-95"
+            >
+              Go to checkout
+            </Button>
           </Link>
-        </div>
-      </div>
-    </div>
+        </motion.div>
+      </motion.div>
+    </motion.div>
   )
 }
 
